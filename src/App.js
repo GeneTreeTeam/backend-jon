@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {signUp }from './constants/auth'
 
 class App extends Component {
+   printMe(){
+      signUp("jay", "email@gmail.com", "password");
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+       <button type='button' onClick={this.printMe} >Sign Up</button>
       </div>
     );
   }
